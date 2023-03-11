@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background: #080808;
     color: #fff;
@@ -451,4 +455,10 @@ nav .fas{
     .copyright{
         font-size: 14px;
     }
+}
+
+#msg{
+    color: #61b752;
+    margin-top: -10px;
+    display: block;
 }
