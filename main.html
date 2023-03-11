@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Victor Sinaga Portfolios Site</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body> 
@@ -22,9 +22,95 @@
             </nav>
             <div class="header-text">
                 <p>Engineering Physicist</p>
-                <h1>I'm Victor Sinaga From Indonesia</h1>
+                <h1>I'm <span>Victor</span><br>Sinaga From Indonesia</h1>
             </div>
         </div>
     </div>
+<!----------about------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/P_20150301_070343.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        Enthuasiastic Engineering Physicist which likes to innovate on many things tech related.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Data Analytics</span><br>Machine Learning, Deep Learning, Computer Vision, Model and Simulation</li>
+                            <li><span>Engineering Physics</span><br>Electrical System, Mechanical Design, Thermal Analysis</li>
+                            <li><span>Software Development</span><br>Web Apps, Mobile Apps(Android), Desktop Apps(Windows)</li>
+                            <li><span>Multimedia Design</span><br>Game, 3D Modelling, Illustration, Animation Video</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2019-2022</span><br>System Engineer at SAS Aero Bandung</li>
+                            <li><span>2018 - 2019</span><br>Internships at Smartadeco Bandung</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2018</span><br>B.Sc from ITB Bandung</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------services-------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Data Analysis</h2>
+                    <p>Analyzing and processing the data for production</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>Engineering Design</h2>
+                    <p>Designing Engineering System with multi-physics aspects</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>Software Development</h2>
+                    <p>Creating functioning Apps (Web, Mobile, Desktop)</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>Multimedia</h2>
+                    <p>Design for Illustration, Animation Video and Game</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
 </body>
 </html>
